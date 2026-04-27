@@ -1,0 +1,465 @@
+{
+  "seed": 42,
+  "shots": [
+    2,
+    4,
+    8
+  ],
+  "target_epochs": 30,
+  "probe_epochs": 8,
+  "chunk_epochs": 4,
+  "source_domain": "source_wider_plus",
+  "probe_margin": 0.03,
+  "probe_rel_ceiling": 0.9,
+  "early_stop_patience": 3,
+  "min_delta": 0.001,
+  "progressive_min_shots": 4,
+  "experiments": {
+    "2": {
+      "scratch_early_stop": {
+        "scale": 0.35,
+        "coverage": 0.93370361328125,
+        "calibration_coverage": 0.9336140950520834,
+        "rel_error": 0.5049733600148465,
+        "interval_width": 0.6009349783261617,
+        "test_mse": 0.0221767940868934,
+        "test_nll": -0.7866083701451619,
+        "test_mean_sigma": 0.4379992663860321,
+        "test_crps_proxy": 0.12035117898476437,
+        "used_epochs": 30,
+        "early_stop_trajectory": [
+          {
+            "epoch": 8,
+            "val_rel_error": 1.1203275918960571
+          },
+          {
+            "epoch": 12,
+            "val_rel_error": 0.8122793436050415
+          },
+          {
+            "epoch": 16,
+            "val_rel_error": 0.6201891303062439
+          },
+          {
+            "epoch": 20,
+            "val_rel_error": 0.5390170216560364
+          },
+          {
+            "epoch": 24,
+            "val_rel_error": 0.5157296061515808
+          },
+          {
+            "epoch": 28,
+            "val_rel_error": 0.5075438618659973
+          },
+          {
+            "epoch": 30,
+            "val_rel_error": 0.5050355792045593
+          }
+        ],
+        "wall_time_sec": 23.490584400002263
+      },
+      "fast_progressive_early_stop": {
+        "scale": 0.225,
+        "coverage": 0.9270887586805555,
+        "calibration_coverage": 0.9270697699652778,
+        "rel_error": 1.195118864520936,
+        "interval_width": 1.0561718384424845,
+        "test_mse": 0.12421780278285345,
+        "test_nll": 0.2027164469162623,
+        "test_mean_sigma": 1.1974737962086996,
+        "test_crps_proxy": 0.31733503143288977,
+        "used_epochs": 30,
+        "early_stop_trajectory": [
+          {
+            "epoch": 8,
+            "val_rel_error": 1.2423685789108276,
+            "phase": "probe"
+          },
+          {
+            "epoch": 12,
+            "val_rel_error": 1.2187910079956055,
+            "phase": "last"
+          },
+          {
+            "epoch": 16,
+            "val_rel_error": 1.2125197649002075,
+            "phase": "all"
+          },
+          {
+            "epoch": 20,
+            "val_rel_error": 1.2068805694580078,
+            "phase": "all"
+          },
+          {
+            "epoch": 24,
+            "val_rel_error": 1.201825737953186,
+            "phase": "all"
+          },
+          {
+            "epoch": 28,
+            "val_rel_error": 1.1972044706344604,
+            "phase": "all"
+          },
+          {
+            "epoch": 30,
+            "val_rel_error": 1.1951543092727661,
+            "phase": "all"
+          }
+        ],
+        "wall_time_sec": 22.791474700003164
+      },
+      "auto_gate": {
+        "scale": 0.225,
+        "coverage": 0.9088677300347221,
+        "calibration_coverage": 0.9090643988715278,
+        "rel_error": 0.5772874153550096,
+        "interval_width": 0.5606925050417583,
+        "test_mse": 0.02898316942155361,
+        "test_nll": -0.4264656603336334,
+        "test_mean_sigma": 0.635705808798472,
+        "test_crps_proxy": 0.16555067588969058,
+        "used_epochs": 30,
+        "chosen_by_probe": "scratch",
+        "regime_allows_progressive": false,
+        "probe_scratch_ok": false,
+        "probe_progressive_ok": false,
+        "probe_rel_ceiling": 0.9,
+        "probe_scratch_val_rel_error": 2.5639727115631104,
+        "probe_progressive_val_rel_error": 1.2378944158554077,
+        "probe_gain_progressive": 1.3260782957077026,
+        "probe_margin": 0.03,
+        "scratch_probe_time_sec": 2.982972099998733,
+        "progressive_probe_time_sec": 2.4916916999936802,
+        "early_stop_trajectory": [
+          {
+            "epoch": 8,
+            "val_rel_error": 2.5639727115631104
+          },
+          {
+            "epoch": 12,
+            "val_rel_error": 2.0583341121673584
+          },
+          {
+            "epoch": 16,
+            "val_rel_error": 1.5834858417510986
+          },
+          {
+            "epoch": 20,
+            "val_rel_error": 1.1524815559387207
+          },
+          {
+            "epoch": 24,
+            "val_rel_error": 0.810867190361023
+          },
+          {
+            "epoch": 28,
+            "val_rel_error": 0.6168310642242432
+          },
+          {
+            "epoch": 30,
+            "val_rel_error": 0.5773076415061951
+          }
+        ],
+        "gate_wall_time_sec": 25.697406200008118,
+        "wall_time_sec": 25.69765339999867
+      }
+    },
+    "4": {
+      "scratch_early_stop": {
+        "scale": 0.42500000000000004,
+        "coverage": 0.9198554144965277,
+        "calibration_coverage": 0.91986083984375,
+        "rel_error": 0.5158489147343552,
+        "interval_width": 0.9358318289120992,
+        "test_mse": 0.02314231718579928,
+        "test_nll": -0.5396456082661947,
+        "test_mean_sigma": 0.5617237726847331,
+        "test_crps_proxy": 0.15203116538246053,
+        "used_epochs": 30,
+        "early_stop_trajectory": [
+          {
+            "epoch": 8,
+            "val_rel_error": 1.3218470811843872
+          },
+          {
+            "epoch": 12,
+            "val_rel_error": 0.9857792258262634
+          },
+          {
+            "epoch": 16,
+            "val_rel_error": 0.7463085651397705
+          },
+          {
+            "epoch": 20,
+            "val_rel_error": 0.5988777875900269
+          },
+          {
+            "epoch": 24,
+            "val_rel_error": 0.540363073348999
+          },
+          {
+            "epoch": 28,
+            "val_rel_error": 0.5204647779464722
+          },
+          {
+            "epoch": 30,
+            "val_rel_error": 0.5159211158752441
+          }
+        ],
+        "wall_time_sec": 25.761359399999492
+      },
+      "fast_progressive_early_stop": {
+        "scale": 0.325,
+        "coverage": 0.9042290581597221,
+        "calibration_coverage": 0.9040120442708334,
+        "rel_error": 1.5488599535239638,
+        "interval_width": 1.1423320690790812,
+        "test_mse": 0.20863440732161204,
+        "test_nll": -0.005771895715345939,
+        "test_mean_sigma": 0.8966500123341878,
+        "test_crps_proxy": 0.29513520677716176,
+        "used_epochs": 30,
+        "early_stop_trajectory": [
+          {
+            "epoch": 8,
+            "val_rel_error": 1.8644628524780273,
+            "phase": "probe"
+          },
+          {
+            "epoch": 12,
+            "val_rel_error": 1.7782901525497437,
+            "phase": "last"
+          },
+          {
+            "epoch": 16,
+            "val_rel_error": 1.7258895635604858,
+            "phase": "all"
+          },
+          {
+            "epoch": 20,
+            "val_rel_error": 1.6745189428329468,
+            "phase": "all"
+          },
+          {
+            "epoch": 24,
+            "val_rel_error": 1.6241364479064941,
+            "phase": "all"
+          },
+          {
+            "epoch": 28,
+            "val_rel_error": 1.5749695301055908,
+            "phase": "all"
+          },
+          {
+            "epoch": 30,
+            "val_rel_error": 1.5488970279693604,
+            "phase": "all"
+          }
+        ],
+        "wall_time_sec": 24.87288520000584
+      },
+      "auto_gate": {
+        "scale": 0.30000000000000004,
+        "coverage": 0.9217203776041667,
+        "calibration_coverage": 0.92156982421875,
+        "rel_error": 0.498350278532092,
+        "interval_width": 0.5456966121991476,
+        "test_mse": 0.02159887452920278,
+        "test_nll": -0.7451294183731079,
+        "test_mean_sigma": 0.4640277047952016,
+        "test_crps_proxy": 0.12374056621615055,
+        "used_epochs": 30,
+        "chosen_by_probe": "scratch",
+        "regime_allows_progressive": true,
+        "probe_scratch_ok": true,
+        "probe_progressive_ok": false,
+        "probe_rel_ceiling": 0.9,
+        "probe_scratch_val_rel_error": 0.752373456954956,
+        "probe_progressive_val_rel_error": 1.3745274543762207,
+        "probe_gain_progressive": -0.6221539974212646,
+        "probe_margin": 0.03,
+        "scratch_probe_time_sec": 3.648433299997123,
+        "progressive_probe_time_sec": 2.8188400999933947,
+        "early_stop_trajectory": [
+          {
+            "epoch": 8,
+            "val_rel_error": 0.752373456954956
+          },
+          {
+            "epoch": 12,
+            "val_rel_error": 0.5961403846740723
+          },
+          {
+            "epoch": 16,
+            "val_rel_error": 0.5230116844177246
+          },
+          {
+            "epoch": 20,
+            "val_rel_error": 0.5039793848991394
+          },
+          {
+            "epoch": 24,
+            "val_rel_error": 0.4998760223388672
+          },
+          {
+            "epoch": 28,
+            "val_rel_error": 0.4984162747859955
+          },
+          {
+            "epoch": 30,
+            "val_rel_error": 0.4980930984020233
+          }
+        ],
+        "gate_wall_time_sec": 28.59692019999784,
+        "wall_time_sec": 28.59713959999499
+      }
+    },
+    "8": {
+      "scratch_early_stop": {
+        "scale": 0.5750000000000001,
+        "coverage": 0.9220770941840277,
+        "calibration_coverage": 0.922024197048611,
+        "rel_error": 0.49871057800646396,
+        "interval_width": 0.47198702692985534,
+        "test_mse": 0.021630118663112322,
+        "test_nll": -1.457040548324585,
+        "test_mean_sigma": 0.20939974586168925,
+        "test_crps_proxy": 0.07792627092616704,
+        "used_epochs": 30,
+        "early_stop_trajectory": [
+          {
+            "epoch": 8,
+            "val_rel_error": 0.6453381180763245
+          },
+          {
+            "epoch": 12,
+            "val_rel_error": 0.5183512568473816
+          },
+          {
+            "epoch": 16,
+            "val_rel_error": 0.5077014565467834
+          },
+          {
+            "epoch": 20,
+            "val_rel_error": 0.5031572580337524
+          },
+          {
+            "epoch": 24,
+            "val_rel_error": 0.5003556609153748
+          },
+          {
+            "epoch": 28,
+            "val_rel_error": 0.4987567365169525
+          },
+          {
+            "epoch": 30,
+            "val_rel_error": 0.4979453980922699
+          }
+        ],
+        "wall_time_sec": 31.60587729999679
+      },
+      "fast_progressive_early_stop": {
+        "scale": 0.35,
+        "coverage": 0.9345309787326389,
+        "calibration_coverage": 0.9344211154513888,
+        "rel_error": 0.7132442805404039,
+        "interval_width": 0.9919567346572876,
+        "test_mse": 0.04424237087368965,
+        "test_nll": -0.2859637836615245,
+        "test_mean_sigma": 0.7230005621910095,
+        "test_crps_proxy": 0.1917608234887066,
+        "used_epochs": 30,
+        "early_stop_trajectory": [
+          {
+            "epoch": 8,
+            "val_rel_error": 1.1448631286621094,
+            "phase": "probe"
+          },
+          {
+            "epoch": 12,
+            "val_rel_error": 1.0025752782821655,
+            "phase": "last"
+          },
+          {
+            "epoch": 16,
+            "val_rel_error": 0.9243206977844238,
+            "phase": "all"
+          },
+          {
+            "epoch": 20,
+            "val_rel_error": 0.853911280632019,
+            "phase": "all"
+          },
+          {
+            "epoch": 24,
+            "val_rel_error": 0.7911648750305176,
+            "phase": "all"
+          },
+          {
+            "epoch": 28,
+            "val_rel_error": 0.7356420159339905,
+            "phase": "all"
+          },
+          {
+            "epoch": 30,
+            "val_rel_error": 0.7132617831230164,
+            "phase": "all"
+          }
+        ],
+        "wall_time_sec": 29.772892299995874
+      },
+      "auto_gate": {
+        "scale": 0.42500000000000004,
+        "coverage": 0.9275472005208335,
+        "calibration_coverage": 0.9273681640625,
+        "rel_error": 0.49576447925880013,
+        "interval_width": 0.5238646904627482,
+        "test_mse": 0.021375316629807153,
+        "test_nll": -1.108254885673523,
+        "test_mean_sigma": 0.31444459160168964,
+        "test_crps_proxy": 0.09437485063584654,
+        "used_epochs": 28,
+        "chosen_by_probe": "scratch",
+        "regime_allows_progressive": true,
+        "probe_scratch_ok": true,
+        "probe_progressive_ok": false,
+        "probe_rel_ceiling": 0.9,
+        "probe_scratch_val_rel_error": 0.5653574466705322,
+        "probe_progressive_val_rel_error": 1.229925513267517,
+        "probe_gain_progressive": -0.6645680665969849,
+        "probe_margin": 0.03,
+        "scratch_probe_time_sec": 5.22445599999628,
+        "progressive_probe_time_sec": 3.5380091999977594,
+        "early_stop_trajectory": [
+          {
+            "epoch": 8,
+            "val_rel_error": 0.5653574466705322
+          },
+          {
+            "epoch": 12,
+            "val_rel_error": 0.5024672746658325
+          },
+          {
+            "epoch": 16,
+            "val_rel_error": 0.49582719802856445
+          },
+          {
+            "epoch": 20,
+            "val_rel_error": 0.49554377794265747
+          },
+          {
+            "epoch": 24,
+            "val_rel_error": 0.4954652190208435
+          },
+          {
+            "epoch": 28,
+            "val_rel_error": 0.4955947697162628
+          }
+        ],
+        "gate_wall_time_sec": 33.70052090000536,
+        "wall_time_sec": 33.700781599996844
+      }
+    }
+  }
+}
